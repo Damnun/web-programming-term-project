@@ -9,10 +9,12 @@
     <title>윈터 트립 (Winter Trip) : 전국 스키장, 콘도 예약 사이트</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/blog/">
-
-    
-  
-<link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+      
+<link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -70,7 +72,7 @@
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="blog.css" rel="stylesheet">
+    <link href="/css/blog.css" rel="stylesheet">
   </head>
   <body>
     
@@ -102,16 +104,67 @@
 </div>
 
 <main class="container">
+  <script src="/js/local_database.js">
+  </script>
   <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
     <div class="col-md-6 px-0">
-      <p><input type="date">
-        <input type="date"></p>
-        <select name="state">
-          <option value="대인" selected="selected">대인</option>
-          <option value="소인">소인</option>
-      </select>
-      인원수 <input type="'number" style="text-align:center;width: 50px"><br>
-      <p>총 가격 <input type="'number" style="width: 100px;"><br></p>
+      <p><input type="date" id="start_date" value='2022-12-16'>
+        
+        <!-- <input type="text" id="start_date" placeholder="예약 날짜"> -->
+        <!-- <script>
+            $(function () {
+                $("#start_date").datepicker({
+                  changeMonth: true,
+                  changeYear: true,
+                  nextText: '다음 달',
+                  prevText: '이전 달',
+                  monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 텍스트
+                  ,monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 Tooltip
+                  ,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 텍스트
+                  ,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
+                  onselect: function(){
+                    var date=$("#start_date").val();
+                    alert(date);
+                  }
+                });
+            });
+        </script> -->
+        <br>
+
+      대인 인원수 <input type="'number" id="adult_num" style="text-align:center;width: 50px"><br>
+      소인 인원수 <input type="'number" id="child_num" style="text-align:center;width: 50px"><br>
+      <p><button id="calculate" onclick="cal(event)">계산</button>
+        <hr>
+      
+      <p>총 가격 <input type="'number" id="final_pay" style="width: 100px;text-align: center;" value=d_day><br></p>
+      <script>
+       
+        function cal(e){
+          var p=document.getElementById("final_pay");
+          var date=document.getElementById("start_date").value;
+
+          var date_date=new Date(date);
+
+          var weekend=date_date.getDay();
+
+          var one_day_pay;
+
+          var adult_num=document.getElementById('adult_num').value;
+          var child_num=document.getElementById('child_num').value;
+
+          
+          localStorage.getItem('ski_resort');
+
+
+          if((weekend==0) || (weekend==6)) {
+            one_day_pay=(one_day_pay/5)*6;
+          }
+          
+          p.value=one_day_pay;
+
+        }
+      </script>
+    
     </div>
   </div>
 
