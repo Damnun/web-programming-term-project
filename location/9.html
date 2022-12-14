@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>윈터 트립 (Winter Trip) : 전국 스키장, 콘도 예약 사이트</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="blog-header lh-1 py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-4 pt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                        <a xlink:href="../index.html" target="_self">
+                            <path
+                                d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+                        </a>
+                    </svg>
+                </div>
+                <div class="col-4 text-center">
+                    <a class="blog-header-logo text-dark" href="#">윈터 트립 (Winter Trip)</a>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    <a onclick="window.location.href='../index.html'" class="btn btn-sm btn-outline-secondary" href="#">문의하기</a>
+                </div>
+            </div>
+            <hr>
+        </header>
+        <br>
+    </div>
+
+    <main>
+        <section class="py-4 text-center container">
+            <div class="row py-lg-5">
+                <h1 class="fw-light">경남 지역에서 예약가능한 곳을 모아봤어요</h1>
+            </div>
+        </section>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="../images/eden.jpeg">
+
+                            <div class="card-body">
+                                <p class="card-text text-center">에덴밸리리조트</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" onclick="window.location.href='../calculator.html?code=90'" class="btn btn-sm btn-outline-secondary">최저가 계산하기</button>
+                                    </div>
+                                    <small class="text-muted">14,523 추천</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="../images/pic2.jpeg">
+
+                            <div class="card-body">
+                                <p class="card-text text-center">경남스카이스키장</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" onclick="window.location.href='../calculator.html?code=91'" class="btn btn-sm btn-outline-secondary">최저가 계산하기</button>
+                                    </div>
+                                    <small class="text-muted">8,923 추천</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="../images/pic3.jpeg">
+
+                            <div class="card-body">
+                                <p class="card-text text-center">경남리조트</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" onclick="window.location.href='../calculator.html?code=92'" class="btn btn-sm btn-outline-secondary">최저가 계산하기</button>
+                                    </div>
+                                    <small class="text-muted">6,344 추천</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="../images/pic4.jpeg">
+
+                            <div class="card-body text-center">
+                                <p class="card-text">경남스카이밸리스키장</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" onclick="window.location.href='../calculator.html?code=93'" class="btn btn-sm btn-outline-secondary">최저가 계산하기</button>
+                                    </div>
+                                    <small class="text-muted">4,763 추천</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="../images/pic5.jpeg">
+
+                            <div class="card-body">
+                                <p class="card-text text-center">저녁하늘리조트</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" onclick="window.location.href='../calculator.html?code=94'" class="btn btn-sm btn-outline-secondary">최저가 계산하기</button>
+                                    </div>
+                                    <small class="text-muted">4,221 추천</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="../images/pic6.jpg">
+
+                            <div class="card-body">
+                                <p class="card-text text-center">밤하늘스카이캐슬</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" onclick="window.location.href='../calculator.html?code=95'" class="btn btn-sm btn-outline-secondary">최저가 계산하기</button>
+                                    </div>
+                                    <small class="text-muted">3,09 추천</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-muted py-5">
+        <div class="container">
+            <p class="float-end mb-1">
+                <a href="#">위로 가기</a>
+            </p>
+            <p class="mb-1">Copyright &copy; 순천향대학교 의료IT공학과 이재헌, 강재영</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
