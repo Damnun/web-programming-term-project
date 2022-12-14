@@ -14,7 +14,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         
       
-<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -72,7 +72,7 @@
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="/css/blog.css" rel="stylesheet">
+    <link href="css/blog.css" rel="stylesheet">
   </head>
   <body>
     
@@ -104,7 +104,7 @@
 </div>
 
 <main class="container">
-  <script src="/js/local_database.js">
+  <script src="js/local_database.js">
   </script>
   <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
     <div class="col-md-6 px-0">
@@ -152,15 +152,66 @@
           var adult_num=document.getElementById('adult_num').value;
           var child_num=document.getElementById('child_num').value;
 
+          var url=window.location.href;
+          var code=url.slice(-2, url.length);
           
-          localStorage.getItem('ski_resort');
+          if(code==10 || code==11 || code==12 || code==13 || code==14 || code==15 || code==20 || code==21 || code==22 || code==23 || code==24 || code==25 || code==34 || code==35 || code==50 || code==51 || code==52 || code==53 || code==54 || code==55 || code==60 || code==61 || code==62 || code==63 || code==64 || code==65 || code==70 || code==71 || code==72 || code==73 || code==74 || code==75 || code==80 || code==81 || code==82 || code==83 || code==84 || code==85 || code==91 || code==92 || code==93 || code==94 || code==95 || code==101 || code==102 || code==103 || code==104 || code==105 || code==110 || code==111 || code==112 || code==113 || code==114 || code==115 || code==120 || code==121 || code==122 || code==123 || code==124 || code==125 || code==130 || code==131 || code==132 || code==133 || code==134 || code==135 || code==140 || code==141 || code==142 || code==143 || code==144 || code==145 || code==150 || code==151 || code==152 || code==153 || code==154 || code==155){
+            var price=JSON.parse(window.localStorge.getItem('seoulmiddle'));
+          }
+          else if(code==30){
+            var price=JSON.parse(window.localStorge.getItem('beartwon'));
+          }
+          else if(code==31){
+            var price=JSON.parse(window.localStorge.getItem('starhill'));
+          }
+          else if(code==32){
+            var price=JSON.parse(window.localStorge.getItem('yangji'));
+          }
+          else if(code==33){
+            var price=JSON.parse(window.localStorge.getItem('jisan'));
+          }
+          else if(code==40){
+            var price=JSON.parse(window.localStorge.getItem('phoenix'));
+          }
+          else if(code==41){
+            var price=JSON.parse(window.localStorge.getItem('yongpyong'));
+          }
+          else if(code==42){
+            var price=JSON.parse(window.localStorge.getItem('daemyong'));
+          }
+          else if(code==43){
+            var price=JSON.parse(window.localStorge.getItem('wellihilli'));
+          }
+          else if(code==44){
+            var price=JSON.parse(window.localStorge.getItem('hansol'));
+          }
+          else if(code==45){
+            var price=JSON.parse(window.localStorge.getItem('high1'));
+          }
+          else if(code==46){
+            var price=JSON.parse(window.localStorge.getItem('elysian'));
+          }
+          else if(code==47){
+            var price=JSON.parse(window.localStorge.getItem('edenvalley'));
+          }
+          else if(code==90){
+            var price=JSON.parse(window.localStorge.getItem('edenvalley'));
+          }
+          else if(code==100){
+            var price=JSON.parse(window.localStorge.getItem('mujuduck'));
+          }
+          
+          
+          var adult_price=adult_num*price["대인값"];
+          var child_price=child_num*price["소인값"];
 
+          one_day_pay=adult_price+child_price;
 
           if((weekend==0) || (weekend==6)) {
             one_day_pay=(one_day_pay/5)*6;
           }
           
-          p.value=one_day_pay;
+          p.value=code;
 
         }
       </script>
