@@ -83,7 +83,7 @@
         <a class="link-secondary" href="#">Logo</a>
       </div>
       <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark" href="#">윈터 트립 (Winter Trip)</a>
+        <a class="blog-header-logo text-dark" href="index.html">윈터 트립 (Winter Trip)</a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
         <a class="link-secondary" href="#" aria-label="Search">
@@ -96,9 +96,9 @@
 
   <div class="nav-scroller py-1 mb-2">
     <nav class="nav d-flex justify-content-between">
-      <a class="p-2 link-secondary" href="#">리조트 소개</a>
-      <a class="p-2 link-secondary" href="#">예상 가격 계산</a>
-      <a class="p-2 link-secondary" href="#">리뷰 보기</a>
+      <a class="p-2 link-secondary" href="select-map.html">지도로 돌아가기</a>
+      <a class="p-2 link-secondary" href="calculator.html">예상 가격 계산</a>
+      <a class="p-2 link-secondary" href="review.html">리뷰 보기</a>
     </nav>
   </div>
 </div>
@@ -110,25 +110,6 @@
     <div class="col-md-6 px-0">
       <p><input type="date" id="start_date" value='2022-12-16'>
         
-        <!-- <input type="text" id="start_date" placeholder="예약 날짜"> -->
-        <!-- <script>
-            $(function () {
-                $("#start_date").datepicker({
-                  changeMonth: true,
-                  changeYear: true,
-                  nextText: '다음 달',
-                  prevText: '이전 달',
-                  monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 텍스트
-                  ,monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 Tooltip
-                  ,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 텍스트
-                  ,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
-                  onselect: function(){
-                    var date=$("#start_date").val();
-                    alert(date);
-                  }
-                });
-            });
-        </script> -->
         <br>
 
       대인 인원수 <input type="'number" id="adult_num" style="text-align:center;width: 50px"><br>
@@ -154,51 +135,69 @@
 
           var url=window.location.href;
           var code=url.slice(-2, url.length);
+
+          var pricestr;
+          var price;
           
-          if(code==10 || code==11 || code==12 || code==13 || code==14 || code==15 || code==20 || code==21 || code==22 || code==23 || code==24 || code==25 || code==34 || code==35 || code==50 || code==51 || code==52 || code==53 || code==54 || code==55 || code==60 || code==61 || code==62 || code==63 || code==64 || code==65 || code==70 || code==71 || code==72 || code==73 || code==74 || code==75 || code==80 || code==81 || code==82 || code==83 || code==84 || code==85 || code==91 || code==92 || code==93 || code==94 || code==95 || code==101 || code==102 || code==103 || code==104 || code==105 || code==110 || code==111 || code==112 || code==113 || code==114 || code==115 || code==120 || code==121 || code==122 || code==123 || code==124 || code==125 || code==130 || code==131 || code==132 || code==133 || code==134 || code==135 || code==140 || code==141 || code==142 || code==143 || code==144 || code==145 || code==150 || code==151 || code==152 || code==153 || code==154 || code==155){
-            var price=JSON.parse(window.localStorge.getItem('seoulmiddle'));
+          if(code=='30'){
+            pricestr=window.localStorage.getItem('beartown');
+            price=JSON.parse(pricestr);
           }
-          else if(code==30){
-            var price=JSON.parse(window.localStorge.getItem('beartwon'));
+          else if(code=='31'){
+            pricestr=window.localStorage.getItem('starhill');
+            price=JSON.parse(pricestr);
           }
-          else if(code==31){
-            var price=JSON.parse(window.localStorge.getItem('starhill'));
+          else if(code=='32'){
+            pricestr=window.localStorage.getItem('yangji');
+            price=JSON.parse(pricestr);
           }
-          else if(code==32){
-            var price=JSON.parse(window.localStorge.getItem('yangji'));
+          else if(code=='33'){
+            pricestr=window.localStorage.getItem('jisan');
+            price=JSON.parse(pricestr);
           }
-          else if(code==33){
-            var price=JSON.parse(window.localStorge.getItem('jisan'));
+          else if(code=='40'){
+            pricestr=window.localStorage.getItem('phoenix');
+            price=JSON.parse(pricestr);
           }
-          else if(code==40){
-            var price=JSON.parse(window.localStorge.getItem('phoenix'));
+          else if(code=='41'){
+            pricestr=window.localStorage.getItem('yongpyong');
+            price=JSON.parse(pricestr);
           }
-          else if(code==41){
-            var price=JSON.parse(window.localStorge.getItem('yongpyong'));
+          else if(code=='42'){
+            pricestr=window.localStorage.getItem('daemyong');
+            price=JSON.parse(pricestr);
           }
-          else if(code==42){
-            var price=JSON.parse(window.localStorge.getItem('daemyong'));
+          else if(code=='43'){
+            pricestr=window.localStorage.getItem('wellihilli');
+            price=JSON.parse(pricestr);
           }
-          else if(code==43){
-            var price=JSON.parse(window.localStorge.getItem('wellihilli'));
+          else if(code=='44'){
+            pricestr=window.localStorage.getItem('hansol');
+            price=JSON.parse(pricestr);
           }
-          else if(code==44){
-            var price=JSON.parse(window.localStorge.getItem('hansol'));
+          else if(code=='45'){
+            pricestr=window.localStorage.getItem('high1');
+            price=JSON.parse(pricestr);
           }
-          else if(code==45){
-            var price=JSON.parse(window.localStorge.getItem('high1'));
+          else if(code=='46'){
+            pricestr=window.localStorage.getItem('elysian');
+            price=JSON.parse(pricestr);
           }
-          else if(code==46){
-            var price=JSON.parse(window.localStorge.getItem('elysian'));
+          else if(code=='47'){
+            pricestr=window.localStorage.getItem('edenvalley');
+            price=JSON.parse(pricestr);
           }
-          else if(code==47){
-            var price=JSON.parse(window.localStorge.getItem('edenvalley'));
+          else if(code=='90'){
+            pricestr=window.localStorage.getItem('edenvalley');
+            price=JSON.parse(pricestr);
           }
-          else if(code==90){
-            var price=JSON.parse(window.localStorge.getItem('edenvalley'));
+          else if(code=='100'){
+            pricestr=window.localStorage.getItem('mujuduck');
+            price=JSON.parse(pricestr);
           }
-          else if(code==100){
-            var price=JSON.parse(window.localStorge.getItem('mujuduck'));
+          else {
+            pricestr=window.localStorage.getItem('seoulmiddle');
+            price=JSON.parse(pricestr);
           }
           
           
@@ -211,7 +210,7 @@
             one_day_pay=(one_day_pay/5)*6;
           }
           
-          p.value=code;
+          p.value=one_day_pay;
 
         }
       </script>
